@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-2 sideNav">
+    <nav class="nav flex-column">
+        <a class="nav-link active" href="/user">Home</a>
+        <a class="nav-link" href="/create">Create Cards</a>
+        <a class="nav-link" href="/subjects">View Subjects</a>
+        <a class="nav-link" href="/view_cards">View Cards</a>
+    </nav>
+  </div>
+  <div class="uploadMain col-10 pr-0" id="jumbo">
+    {{!-- <div class="jumbotron jumbotron-fluid ">
+      <div class="container">
+        <div class="row">
+          <<i class="fas fa-user-astronaut fa-5x"></i>>
+          <h1 class="display-4">USER NAME</h1>
+        </div>
+      </div>
+    </div> --}}
+
+<form action="/" enctype="multipart/form-data" method="post">
+    <input type="file" name="upload" multiple>
+    <input type="submit" value="Upload">
+</form>
+
+  </div>
+</div>
+
+<script>
+var formidable = require("formidable");
+var express = require("express");
+var other = express();
+
+other.get("/upload", function(req, res) {
+  res.sendFile(__dirname + "/uploads");
+});
+
+other.post("/api/upload", function(req, res) {
+  var form = new formidable.IncomingForm();
+
+  form.parse(req);
+
+  form.on("fileBegin", function(name, file) {
+    file.path = __dirname + "/uploads/" + file.name;
+  });
+
+  form.on("file", function(name, file) {
+    console.log("Uploaded " + file.name);
+  });
+
+  res.sendFile(__dirname + "/uploads");
+});
+
+  function updateUpload(flashcard) {
+    $.ajax({
+      method: "PUT",
+      url: "/api/flashcards",
+      data: flashcard
+    })
+      .then(function() {
+        window.location.href = "/view_cards?subject_id=";
+      });
+  }
+</script>

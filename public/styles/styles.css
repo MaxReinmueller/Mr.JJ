@@ -1,22 +1,130 @@
+html,body{
+  height: 100%;
+  /* margin: 0; padding: 0; border: none; */
+  background-color: lightgray;
+  /* min-height: 100%; */
+  /* overflow: hidden; */
+  background: url("../images/study.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Long Cang', cursive;
+  font-size: 20px;
+}
+
+.ad {
+  width: 30%;
+  margin: 15% 40%;
+}
+
+.col-2,
+.col-10 {
+  margin-bottom: -9999px;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
 
-body {
-  background-color: lightgray;
+.subj {
+  background-color: white;
+  text-align: center;
 }
 
-.sideNav {
+.nav2 {
   background-color: white;
+  width: 100%;
+  
+}
+
+.nav2links {
+  padding: 7px;
 }
 
 #jumbo {
   padding-left: 0px;
 }
 
+.sideNav {
+  background: white;
+  /* opacity: 0.5; */
+  padding: 10px;
+  text-align: center;
+  font-size: 28px;
+}
+
+#navButtons {
+  margin-left: 65%;
+}
+
+.button {
+  border-radius: 10px;
+  background: white;
+  margin-right: 20px;
+  border: 1px solid black;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: blue;
+}
+
 .fa-user-astronaut{
   margin-right: 15px;
   margin-left: 15px;
+}
+
+.userMain,
+.uploadMain {
+  margin: 15%;
+  text-align: center;
+}
+
+.viewCardsMain {
+  text-align: center;
+  margin: 5% 15%;
+}
+
+.card-body {
+  font-size: 30px;
+}
+
+.delete {
+  margin-right: 10px;
+}
+
+.blog-container {
+  margin: 0 37%;
+}
+
+.createMain,
+.subjectMain {
+  text-align: center;
+}
+
+.createTitle{
+  color: white;
+}
+
+.createsBtn {
+  margin-right: 20px;
+}
+
+.mb-3 {
+  background: #f5f3f4;
+  padding: 10px;
+}
+
+.subjectMain {
+  padding: 5% 10%;
+  /* font-size: 18px; */
+}
+
+.subjectTitle {
+  color: white;
+  padding: 10px;
+}
+
+.subject-container{
+  background: white;
 }
 
 .cardSections{
@@ -35,4 +143,131 @@ body {
 
 .cardTurner{
   margin-top: 5px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+.loginHeader{
+background-color: #FEFFED;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+}
+hr{
+margin: 10px -50px;
+border: 0;
+border-top: 1px solid #ccc;
+margin-bottom: 40px;
+}
+div.obtainer{
+width: 900px;
+height: 610px;
+margin:35px auto;
+font-family: 'Raleway', sans-serif;
+}
+div.main{
+width: 300px;
+padding: 10px 50px 25px;
+margin: 10% 30%;
+border: 2px solid gray;
+border-radius: 10px;
+font-family: raleway;
+float:left;
+margin-top:50px;
+}
+input[type=text],input[type=password]{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+}
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 18px;
+font-weight: bold;
+}
+center{
+font-size:32px;
+}
+.note{
+color:red;
+}
+.valid{
+color:green;
+}
+.back{
+text-decoration: none;
+border: 1px solid rgb(0, 143, 255);
+background-color: rgb(0, 214, 255);
+padding: 3px 20px;
+border-radius: 2px;
+color: black;
+}
+input[type=button]{
+font-size: 16px;
+background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+border: 1px solid #e5a900;
+color: #4E4D4B;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+border-radius: 5px;
+padding: 10px 0;
+outline:none;
+}
+input[type=button]:hover{
+background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
+
+@media only screen and (max-width: 320px) {
+
+  body { 
+     font-size: 2em; 
+  }
+
 }

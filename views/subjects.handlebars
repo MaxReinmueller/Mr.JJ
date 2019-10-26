@@ -1,0 +1,41 @@
+
+  <div class="row">
+    <div class="col-2 sideNav">
+      <nav class="nav flex-column">
+        <a class="nav-link active" href="/user">Home</a>
+        <a class="nav-link" href="/create">Create Cards</a>
+        <a class="nav-link" href="/subjects">View Subjects</a>
+        <a class="nav-link" href="/view_cards">View Cards</a>
+      </nav>
+    </div>
+    <div class="subjectMain col-md-10">
+      <h1 class="subjectTitle">Subjects</h1>
+      <div class="subject-container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>
+                {{!-- # of Flashcards --}}
+              </th>
+              <th>See Subject's Flashcards</th>
+              <th>New Flashcard</th>
+              <th>Delete Subject</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="form-row">
+              <form id="subject-form">
+                <td colspan="4">
+                  <input placeholder="Enter a subject" id="subject-name" type="text" />
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-success">Create Subject</button>
+                </td>
+              </form>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

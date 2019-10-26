@@ -1,54 +1,34 @@
-
-{{!-- side nav and cards --}}
+{{!-- side nav and jumbotron --}}
 <div class="row">
   <div class="col-2 sideNav">
     <nav class="nav flex-column">
+      <a class="nav-link active" href="/user">Home</a>
+      <a class="nav-link" href="/create">Create Cards</a>
+      <a class="nav-link" href="/subjects">View Subjects</a>
       <a class="nav-link" href="/view_cards">View Cards</a>
-      {{!-- <a class="nav-link" href="/user/classes">Classes</a>
-      <a class="nav-link" href="/user/tests">Tests</a>
-      <a class="nav-link" href="/user/chapters_concepts">Chapters/Big Concepts</a>
-      <a class="nav-link" href="/user/archives">Archive</a> --}}
-    </nav>
+      </nav>
   </div>
-  <div class="col-7">
-    <div class="container cardSections">
-      <h3>Currently studying (favorites)</h3>
-      <div class="card-deck">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">UCSD Coding Assessment<i class="fas fa-star"></i></h5>
-            <p class="card-text">Weeks 2 - 3</p>
-            <a href="#" class="btn btn-sm btn-primary">Study!</a>
-            <a href="#" class="btn btn-sm btn-warning">Archive</a>
-            <p class="card-text"><small class="text-muted">Last studied 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container cardSections">
-      <h3>Study History</h3>
-      <div class="card-deck">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">UCSD Coding Assessment</h5>
-            <p class="card-text">Weeks 2 - 3</p>
-            <a href="#" class="btn btn-sm btn-primary">Study!</a>
-            <a href="#" class="btn btn-sm btn-warning">Archive</a>
-            <p class="card-text"><small class="text-muted">Last studied 3 mins ago</small></p>
+  <div class="col-10 pr-0" id="jumbo">
+    {{!-- <div class="jumbotron jumbotron-fluid ">
+      <i class="fas fa-user-astronaut fa-3x"> USERNAME</i>
+    </div> --}}
 
-          </div>
-        </div>
-      <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Javascript</h5>
-            <p class="card-text">Study Javascript.</p>
-            <a href="#" class="btn btn-sm btn-primary">Study!</a>
-            <a href="#" class="btn btn-sm btn-warning">Archive</a>
-            <p class="card-text"><small class="text-muted">Last studied 3 mins ago</small></p>
-
-          </div>
-        </div>
-      </div>
+    <div class="userMain">
+      <h1 class="mb-3 ml-3">Start Studying</h1>
+      <div class="card-deck col-12" id="subject-card"></div>
     </div>
+
   </div>
 </div>
+
+{{!-- <div class="row">
+  <div class="col-10">
+     <div class="row">
+      <h1 class="mb-3 ml-3">Start Studying</h1>
+    </div>
+    <div class="row">
+      <div class=" card-deck col-12" id="subject-card">
+        </div>
+    </div>
+</div>
+</div> --}}

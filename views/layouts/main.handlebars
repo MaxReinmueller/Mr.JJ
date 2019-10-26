@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://kit.fontawesome.com/8ff7f00b1a.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  {{!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> --}}
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
   <title>Flashee</title>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="/">Flashee</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-sm btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <li class="nav-item">
-        <a class="nav-link" href="/create">Create Cards</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-{{!-- side nav and jumbotron --}}
-<div class="row">
-  <div class="col-2 sideNav">
-    <nav class="nav flex-column">
-      <a class="nav-link active" href="/user">Home</a>
-      <a class="nav-link" href="#">Settings</a>
-            <a class="nav-link" href="/create">Create Cards</a>
-    </nav>
-  </div>
-  <div class="col-10" id="jumbo">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="row">
-          <i class="fas fa-user-astronaut fa-5x"></i>
-          <h1 class="display-4">USER NAME</h1>
-        </div>
-      </div>
+    <a class="navbar-brand" href="/user">
+    <img src="./images/flashee-text-logo.png" width="200" height="70" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" id="navButtons">
+        <li class="nav-item">
+          <button class="button"><a class="nav-link" href="/login">Log In</a></button>
+        </li>
+        <li class="nav-item">
+          <button class="button"><a class="nav-link" href="/upload">Upload Pictures</a></button>
+        </li>
+          <li class="nav-item">
+          <button class="button"><a class="nav-link" href="/create">Create Cards</a></button>
+        </li>
+      </ul>
     </div>
-  </div>
-</div>
-    {{{body}}}
+  </nav>
+
+  {{{body}}}
+
+  {{!-- script tag for subject.handlebars  and create
+    don't use ../ intuitively as all scripts start from public dirctory when using this model--}}
+  <script src="./js/subject.js"></script>
+  <script src="./js/create.js"></script>
+  {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script> --}}
+  <script src="./js/viewCards.js" type="text/javascript"></script>
+  <script src="./js/user.js" type="text/javascript"></script>
+  <script src="./js/upload.js" type="text/javascript"></script>
+
 </body>
+
 </html>

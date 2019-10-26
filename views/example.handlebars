@@ -1,19 +1,29 @@
 <div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title">Goal</h5>
-          <p>
-            <strong>ID</strong>: {{example.id}}</p>
-          <p>
-          <p>
-            <strong>Goal</strong>: {{example.text}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
-            <a href="/">← Back To Home</a>
+  <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="row">
+          <div class="col-8 offset-2">
+            <div class="card mt-4">
+              <div class="card-body">
+                  <div class="flip-card-front">
+
+                      <h5 class="card-title">Goal</h5>
+                      <p>
+                        <strong>ID</strong>: {{example.id}}</p>
+                      <p>
+                      <p>
+                        <strong>Goal</strong>: {{example.text}}</p>
+                      <p>
+                  </div>
+                  <div class="flip-card-back">
+
+                  <strong>Description:</strong> {{example.description}}</p>
+                  <a href="/">← Back To Home</a>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
