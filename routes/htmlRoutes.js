@@ -34,6 +34,7 @@ module.exports = function(app) {
     res.render("create", {});
   });
 
+
   app.get("/subjects", function(req, res) {
     res.render("subjects", {});
   });
@@ -41,6 +42,7 @@ module.exports = function(app) {
   app.get("/upload", function(req, res) {
     res.render("upload", {});
   });
+
 
   app.get("/login", function(req, res) {
     res.render("login", {});
