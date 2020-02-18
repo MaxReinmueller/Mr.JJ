@@ -1,51 +1,22 @@
 # README_template 
 ![Version](https://img.shields.io/badge/version-1.0.4-brightgreen)
-> Because making sense just makes sense.
+> Make your own flash cards.
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
-* [Setup](#setup)
 * [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+
 
 ## General info
-Created to leverage past work, achieve consistency in presentation, save time, and have fun!
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
+Create flash cards by typing in a term and definition. Review them to help you study for tests
 
 ## Technologies
 * Node
 * Express
 * Path
 
-## Setup
-Describe how to install / setup your local environement / add link to demo version.
-
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
-
 ## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
-## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
-
-## Inspiration and resources
-* Make your own shield: <a href="https://shields.io/#your-badge" target="https://shields.io/#your-badge">shield.io</a>
-
-
-## Contact
-Feel free to contact me!
+* Create flash cards
+* Reveal answers on the back of each card
+* Delete un-needed cards.
